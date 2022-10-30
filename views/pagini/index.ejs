@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang = "ro">
+  <head>
+      <meta charset ="UTF-8">
+      <meta name ="keywords" content="beauty, salon, ingrijire corporala, hairstyle, massage, make-up">
+      <meta name = "description" content ="Pagina web a salonului A'postroph, salon ce ofera servicii de ingrijire corporala">
+      <meta name = "author" content ="Liciu Stefan">
+      <title>A'postroph</title>
+      <!--Favicon-->
+      <link rel="apple-touch-icon" sizes="180x180" href="./resurse/icon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./resurse/icon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="i./resurse/icon/favicon-16x16.png">
+      <link rel="manifest" href="./resurse/icon/site.webmanifest">
+      <link rel="mask-icon" href="./resurse.icon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+      <link rel ="stylesheet" href ="./resurse/style.css">
+      <!--<script src="script.js"></script>-->
+  </head>
+  <body>
+          
+        <%- include("../fragmente/header.ejs") %>  
+        <% if(!locals.utilizator) { %>
+             <form method = "post" action = "/login">
+                 <label>
+                     Username: <input type = "text" name = "username" required/>
+                 </label><br/>
+                 <label>
+                     Parola: <input type = "password" name = "parola" required/>
+                 </label>
+                 <input type = "submit" value = "Trimite">
+             </form>
+        <% } %>
+        <div id = "container">
+          <section id ="Acasa">
+           
+          </section>
+          <section id ="Orar">
+            <h3>Orar</h3>
+            <table id="tab-orar">
+              <thead>
+  
+                  <tr>
+                      <th>Cod</th>
+                      <th>Perioadă</th>
+                      <th>Zi</th>
+                      <th>Interval dimineata</th>
+                      <th>Pauza de masa</th>
+                      <th>Interval seară</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td></td>
+                      <td rowspan="5">Zile<br/>Lucrătoare</td>
+                      <td>Luni</td>
+                      <td>10-12</td>
+                      <td>12-14</td>
+                      <td>14-20</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      
+                      <td>Marti</td>
+                      <td>9-12</td>
+                      <td>12-14</td>
+                      <td>14-21</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      
+                      <td>Miercuri</td>
+                      <td>9-11</td>
+                      <td>11-13</td>
+                      <td>14-21</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      
+                      <td>Joi</td>
+                      <td>9-11</td>
+                      <td>11-13</td>
+                      <td>14-21</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      
+                      <td>Vineri</td>
+                      <td>9-12</td>
+                      <td>12-14</td>
+                      <td>14-19</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td rowspan="2">Weekend</td>
+                      <td>Sambata</td>
+                      <td>10-12</td>
+                      <td>12-13</td>
+                      <td>13-16</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>Duminica</td>
+                      <td>10-14</td>
+                      <td>-</td>
+                      <td>inchis</td>
+                  </tr>
+              </tbody>
+          </table>
+          </section>
+          <section id ="Departamente">
+             <div id ="Body_Beauty">
+                 
+              </div>
+             <div id = "Hair_Beauty">
+                </div>
+             <div id = "Apostroph_Men">
+               
+            </div>
+            <div id = "Nails_Beauty">
+            </div>
+            <div id = "Face_Beauty">
+                </div>
+            <div id = "Make-up">
+                </div>
+          </section>
+         
+
+          <section id = "GiftCard">
+            <div id = "imagine-gift">
+                <figure>
+                    <picture>
+                     <source srcset ="./resurse/images/Apostroph-Gift-mic.jpeg" media = "(max-width:700px)"/>
+                     <source srcset = "./resurse/images/Apostroph-Gift-mare.png" media = "(max-width:1200px)"/>
+                   <img src = "./resurse/images/Apostroph-Gift.jfif" alt = "text alternativ">
+                   </picture>
+                   <figcaption>Apostroph Gift</figcaption>
+                  </figure>
+                </div>
+            <div id = "text-gift">
+            <h2>Apostroph Gift&Shop</h2>
+            <p>Misiunea echipei <b>APOSTROPH'</b> specializata pe corp este sa creeze starea de bine si <b>sanatate</b> pentru corpul tau, dar mai ales sa conecteze spiritul la imaginea unui trup <b>frumos</b> armonizat. Pentru orice nevoie de frumusete si sanatate a corpului, echipa noastra ofera consultatii prealabile gratuite si personalizate.
+               </p><hr><p><strong>De ce sunt masajele atat de importante?</strong>
+                Pentru ca terapia prin masaj, merge mai departe de relaxare si eliberarea stresului. S-a demonstrat ca aceste terapii pot atenua durerile de cap, imbunatateste starea psihica, ajuta la o flexibilitate mai buna si scade presiunea arteriala.
+                </p>
+                <button id = "buton1">Afla mai multe</button>
+            </div>
+          </section>
+          <section id = "Promotii">
+            <div id ="Promotii-text">
+                <details>
+                    <summary>Compartimente</summary>
+                     <ul>
+                       <li>Coafor</li>
+                       <li><i>Skin Care</i></li>
+                       <li><i>Face and Body</i></li>
+                       <li><i>Make-up</i></li>
+                       <li>Nails</li>
+                     </ul>
+                   </details>
+                   <a href="https://www.youtube.com/embed/JQvrXQ2L6uw" target="ifr-video">Hairstyle tutorial</a>
+                   <a href="https://www.youtube.com/embed/tUIeUi-zYro" target="ifr-video" >Make-up tutorial</a>
+                   <a href="https://www.youtube.com/embed/mu177A1PsLA" target="ifr-video" >Make-up tutorial</a><br/>
+                   <iframe id ="video-iframe" name="ifr-video" width="315" height="315" src="https://www.youtube.com/embed/JQvrXQ2L6uw" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
+            </div>
+            <section id="download-image"><a href = "./resurse/images/Apostroph-Promotii.jfif" download><img src = "./resurse/images/Apostroph-Promotii.jfif" alt ="Promotii"></a></section>
+          </section>
+          <section id = "Produse">
+           <p>TEXT DESPRE PRODUSE</p>
+            <br>
+            <button id = "btn"><a href = "/produse">Vezi produse</a></button>
+          </section>
+          <br>
+          <br>
+          <section id ="Formular-Programari">
+             
+          </section>
+      </div>
+   
+  <%- include("../fragmente/footer.ejs") %>
+  </body>
+  </html>

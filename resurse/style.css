@@ -1,0 +1,458 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    --dim-border-meniu:1px;
+    --inaltime-meniu: 30px;
+    background-color: #8b998f;
+    counter-reset: numar;
+  
+}
+
+h2::before{
+    counter-increment: numar;
+    content: counter(numar);
+}
+ul.menu{
+    display: flex;
+    margin: auto;
+    animation: animatie_meniu 1s ease;
+    animation-direction: alternate;
+    
+}
+ul.menu li{list-style-type: none;
+            border:var(--dim-border-meniu) solid black;
+            height: 30px;
+            line-height: 30px;
+            background-color: gray;
+            width:100px;
+            text-align: center;
+            overflow: hidden;
+            transition:all 0.7s linear}
+nav ul{
+    padding:0;
+    margin:0;
+}
+nav {
+    margin: auto;
+    display: flex;
+    width:auto;
+}
+ul.menu ul{position: relative;
+            right: var(--dim-border-meniu);}
+ul.menu a{display: block;
+           height:100%;
+           width: 100%;
+           color:black;
+           font-weight: bold;
+           text-decoration: none; }
+ul.menu>li:hover{overflow: visible;}
+ul.menu li:hover{background-color: #474747;
+                animation: menu-zoom 2s linear, opacity 3s ease;}
+
+#imagine-fundal{
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #ffffff 95%);
+    text-align: center;
+    position: relative;
+   
+    
+}
+#photo{
+    display: inline-block;
+    height: 100%;
+    width:100px;
+    position:relative;
+    bottom: -2px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+   
+}
+#Acasa
+{   
+    padding: 15em;
+    background-image: url('/resurse/images/Apostroph-View.jpg');
+    background-repeat: no-repeat;
+    
+    background-size:100% auto;
+    /*animation: zoom-in 10s ease-in;*/
+    overflow: hidden;
+       
+}
+
+img{
+    width:50%;
+}
+iframe{
+  width:50%;
+}
+#video-iframe{
+    width:75%;
+    height: 75%;
+}
+#menu, #img_menu{
+    display: none;
+}
+#btn{
+    background-color: gray;
+    width: 15%;
+    height: 50%;
+    overflow: hidden;
+    
+}
+
+#Departamente{
+    position: relative;
+    bottom: -50px;
+    
+    
+    display: grid;
+    /*grid-template-columns:auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    */
+    grid-template-areas: "Body_Beauty Hair_Beauty Apostroph_Men"
+                         "Nails_Beauty Face_Beauty Make-up";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px 100px;
+    margin-bottom: 50px;
+    
+    
+}
+
+#Body_Beauty{
+    position: relative;
+    padding: 8em;
+    background-image: url('/resurse/images/Body_Beauty.jpg');
+    background-size:cover;
+    grid-column: 1;
+    grid-row: 1;
+    grid-area: Body_Beauty;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform .5s ease; 
+    text-align: center;   
+    justify-self: center;
+}
+
+#Body_Beauty:hover{
+    transform: scale(1.1);
+}
+#Hair_Beauty{
+    
+    padding: 8em;
+    background-repeat: no-repeat;
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url('/resurse/images/Hair_Beauty.jpg');
+    background-size:cover;
+  
+    grid-area: Hair_Beauty;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform .5s ease;
+    justify-self: center;
+
+}
+#Hair_Beauty:hover{
+    transform: scale(1.1);
+}
+#Apostroph_Men{  
+    padding: 8em;
+    background-repeat: no-repeat;
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url('/resurse/images/Apostroph_Man.jpg');
+    background-size:cover;
+    grid-area: Apostroph_Men;
+   
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform .5s ease;
+    justify-self: center;
+
+}
+#Apostroph_Men:hover{
+    transform: scale(1.1);
+}
+#Nails_Beauty{
+    padding: 8em;
+    background-repeat: no-repeat;
+    grid-column: 1;
+    grid-row: 2;
+    background-image: url('/resurse/images/Nails_Beauty.jpg');
+    background-size:cover;
+    grid-area: Nails_Beauty;
+  
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform .5s ease;
+    justify-self: center;
+
+}
+#Nails_Beauty:hover{
+    transform: scale(1.1);
+}
+#Face_Beauty{
+    padding: 8em;
+    background-repeat: no-repeat;
+    grid-column: 2;
+    grid-row: 2;
+    background-image: url('/resurse/images/Face_Beauty.jpg');
+    background-size:cover;
+    grid-area: Face_Beauty;
+   
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform .5s ease;
+    justify-self: center;
+
+}
+#Face_Beauty:hover{
+    transform: scale(1.1);
+}
+#Make-up{
+    padding: 8em;
+    background-repeat: no-repeat;
+    grid-column: 3;
+    grid-row: 2;
+    background-image: url('/resurse/images/Make-up.jpg');
+    background-size:cover;
+    grid-area: Make-up;
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform .5s ease;
+    justify-self: center;
+
+
+}
+#Make-up:hover{
+    transform: scale(1.1);
+}
+
+#GiftCard {
+    display: flex;
+    position:relative;
+    padding: 30px;
+  
+  
+  
+}
+
+#imagine-gift{
+
+    display: inline-block;
+    width: 50%;
+    
+
+}
+img{
+   width: 100%;
+   height: 100%;
+}
+#text-gift{
+
+    display: inline-block;
+    width: 50%;
+    margin-left: 50px;
+}
+p{
+    font-family:cursive;
+}
+#Promotii{
+    display:flex;
+    overflow: hidden;
+}
+#Promotii-text{
+    display: inline-block;
+    width: 60%;
+   
+}
+#download-image{
+    display: inline-block;
+    width: 20%;
+}
+#buton1{
+    background-color: aliceblue;
+    border-radius: 25%;
+}
+
+#container{
+    display: grid;
+    grid-template-areas: "Acasa Acasa"
+                         "Departamente Departamente"
+                         "GiftCard GiftCard"
+                         "Promotii Promotii"
+                         "Orar Orar"
+                         "Produse Produse"
+                         "Formular-programari Formular-programari";
+    grid-template-columns: 1fr 1fr;
+}
+
+#Acasa{
+    grid-area: Acasa;
+}
+#Departamente{
+    grid-area: Departamente;
+}
+#GiftCard{
+    grid-area: GiftCard;
+}
+#Promotii{
+    grid-area: Promotii;
+}
+#Orar{
+    grid-area: Orar;
+}
+#Produse{
+    grid-area: Produse;
+}
+
+th, td{
+    border: 1px solid black;
+}
+#Formular-programari{
+    grid-area: Formular-programari;
+}
+@media screen and (max-width: 750px){
+    #btn{
+        height: 30%;
+    }
+    #container{
+        display: grid;
+        grid-template-areas: "Acasa"
+                             "Departamente"
+                             "GiftCard"
+                             "Promotii"
+                             "Orar"
+                             "Produse"
+                             "Formular-programari";
+     
+    }   
+    #Departamente{
+        display: grid;
+        grid-template-areas: "Body_Beauty"
+                             "Hair_Beauty"
+                             "Apostroph_Men"
+                             "Nails_Beauty"
+                             "Face_Beauty"
+                             "Make-up";
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    } 
+    #GiftCard{
+        display:block;
+    }
+    ul.menu{
+        display: none;
+    }
+    ul.menu li{
+        width: 100%;
+        margin:auto;
+    }
+    #menu:checked~ul.menu{
+       display: block;
+    }
+    
+    ul.menu ul li{
+        background-color: blanchedalmond;
+    }
+
+    #img_menu{
+        height: var(--inaltime-meniu);
+        width: auto;
+        display: inline-block;
+    }
+    nav {
+        margin: auto;
+        display: block;
+        width:100%;
+        
+    }
+   img{
+       display: inline;
+   }
+   ul.menu li:hover{background-color: #474747;
+    animation: menu-zoom 2s linear}
+
+   #Body_Beauty{
+         position: relative;
+         left: 100px;
+   }
+   #Hair_Beauty{
+    position: relative;
+    left: 100px;
+  }
+  #Nails_Beauty{
+    position: relative;
+    left: 100px;
+}
+#Apostroph_Men{
+    position: relative;
+    left: 100px;
+}
+#Make-up{
+    position: relative;
+    left: 100px;
+}
+#Face_Beauty{
+    position: relative;
+    left: 100px;
+}
+}
+
+input:invalid{
+    background-color: red;
+}
+@media screen and (max-width: 1230px)
+{ul.menu li{
+    width: 60%;
+  }
+  #Departamente{
+      width: 50%;
+  }
+  #Acasa{
+     height: auto;
+     padding: 15em;
+  }
+
+}
+
+@keyframes animatie_meniu{
+    0%{transform: scaleX(0);}
+    100%{transform: scaleX(1);}
+}
+@keyframes zoom-in {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(0.9, 0.9);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+@keyframes menu-zoom {
+ 0% {
+     transform: scale(1,1);
+ }
+ 100% {
+     transform: scale(1.1,1.1)
+ }
+}
+@keyframes opacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .25; }
+}

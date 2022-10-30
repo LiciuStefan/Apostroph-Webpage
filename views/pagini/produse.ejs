@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <meta name ="keywords" content="beauty, salon, ingrijire corporala, hairstyle, massage, make-up">
+        <meta name = "description" content ="Pagina web a salonului A'postroph, salon ce ofera servicii de ingrijire corporala">
+        <meta name = "author" content ="Liciu Stefan">
+        <title>A'postroph</title>
+        <!--Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./resurse/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="i./resurse/icon/favicon-16x16.png">
+        <link rel="manifest" href="./resurse/icon/site.webmanifest">
+        <link rel="mask-icon" href="./resurse.icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel ="stylesheet" href ="./resurse/style_produse.css">
+        <link rel ="stylesheet" href ="./resurse/style.css">
+
+        <script src="../../resurse/script_produse.js"></script>
+    </head>
+    <body>
+        <%- include("../fragmente/header.ejs") %>  
+        <h1 id = "titlu">TABEL PRODUSE DISPONIBILE</h1>
+        <table id = "tabel_produse">
+            <tr>
+                <th>ID</th>
+                <th>Nume</th>
+                <th>Pret</th>
+                <th>Gramaj (ml)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Fond de ten</td>
+                <td>90</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Corector cu acoperire</td>
+                <td>75</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ruj de buze cu efect satinat</td>
+                <td>70</td>
+                <td>3,5</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Paleta farduri pleoape</td>
+                <td>330</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Fard de obraz</td>
+                <td>110</td>
+                <td>7,5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Mascara pentru volum</td>
+                <td>139</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Gel de curatare pentru pori</td>
+                <td>60</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Corector anticearcan</td>
+                <td>65</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Set machiaj</td>
+                <td>395</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Gel fixare sprancene</td>
+                <td>130</td>
+                <td>7</td>
+            </tr>
+        </table>
+       <br>
+       <br>
+       <br>
+        <div id="container_butoane">
+            <button id="sterge">Sterge produs</button>
+            <button id="add_sfarsit">Adauga produs sfarsit</button>
+            <button id="inverseaza_coloane">Inverseaza pret-gramaj</button>
+            <button id="deselectare">Deselecteaza toate produsele</button>
+            
+            <button id="sorteaza_pret">Sorteaza produse dupa pret</button>
+            <button id="sorteaza_gramaj">Sorteaza produse dupa gramaj</button>
+            <button id="gaseste_produs">Gaseste produs</button>
+            <button id="goleste_tabel">Goleste tabel</button>
+        </div>
+        <br>
+        <br>
+        <form id = "ultimul_selectat">
+            <label>Ultimul produs selectat:
+                <input type = "text" id = "text_selectat" name = "text_selectat"><br>
+            </label>
+            <label>Numarul de bucati:
+                <input type = "range" id = "nr_bucati_selectat" name = "nr_bucati_selectat" min = "0" max = "10" onchange= "update_value(this.value)"><br>
+            </label>
+            <label>
+                <input type = "text" id = "see_nr_bucati" name = "see_nr_bucati"><br>
+            </label>
+            <label>Metoda de transport:
+                <select name = "transport_selectat">
+                    <option value = "FanCourier">FanCourier</option>
+                    <option value = "Cargus">Cargus</option>
+                    <option value = "Ridicare personala">Ridicare personala</option>
+                    <option value = "EasyBox">Easybox</option>
+                </select>
+            </label>
+        </form>
+        <label>Introduceti text:<br>
+            <textarea id = "text" name = "text" rows = "10" cols ="80"></textarea>
+        </label>
+        <!--RADIO BUTTON CU METODA DE AMPLASARE A COMENZII-->
+        <!--RANGE CU NR DE BUCATI-->
+    </body>
+
+    <%- include("../fragmente/footer.ejs") %>  
+</html>

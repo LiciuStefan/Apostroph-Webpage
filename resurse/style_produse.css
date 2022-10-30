@@ -1,0 +1,81 @@
+#tabel_produse{
+    background-color: cadetblue ;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+th, td{
+    border: 1px solid black;
+}
+body{
+background-color: #8b998f;
+}
+
+#container_butoane{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+#add_inceput{
+   grid-column: 1;
+   grid-row: 1;
+}
+#add_sfarsit{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#inverseaza_coloane{
+    grid-column: 3;
+    grid-row: 1;
+}
+#deselectare{
+    grid-column: 4;
+    grid-row: 1;
+}
+            
+#sorteaza_pret{
+    grid-column: 1;
+    grid-row: 2;
+}
+#sorteaza_medie
+{
+    grid-column: 2;
+    grid-row: 2;
+}
+#gaseste_produs{
+    grid-column: 3;
+    grid-row: 2;
+}
+#goleste_tabel{
+    grid-column: 4;
+    grid-row: 2;
+}
+
+#container_butoane button{
+    display: inline-block;
+    padding: 1em;
+    border: 2px solid #157A78;
+    background: aquamarine;
+    background: linear-gradient(to left, #075C5B 50%, aquamarine 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out; 
+
+}
+
+#container_butoane button:hover{
+   background-position: left;
+  
+}
+
+.selectat{
+    background-color: green;
+}
+
+textarea {
+    max-width: 95%;
+}

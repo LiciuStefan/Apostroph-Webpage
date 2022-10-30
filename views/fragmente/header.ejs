@@ -1,0 +1,31 @@
+<section id = "imagine-fundal">
+    <img id ="photo" src = "./resurse/images/Apostroph-Logo.jpg" alt="imagine">
+</section>
+<nav id = "navigation">
+  <label for ="menu"><img id ="img_menu" src ="./resurse/images/Hamburger_icon_negru.png" alt = "menu"></label>
+  <input type="checkbox" id = "menu"/>
+  <ul class ="menu">
+      <li><a href = "/index">Acasa</a>
+      <ul>
+          <li><a href = "">Noutati</a></li>
+          <li><a href = "">Aboneaza-te la newslatter</a></li>
+          <li><a href="/index#Orar">Orar</a></li>
+
+      </ul>
+      
+      </li>
+
+      <li><a href = "/index#Departamente">Departamente</a></li>
+      <li><a href = "/index#GiftCard">GiftCard</a></li>
+      <li><a href = "/index#Promotii">Promotii</a></li>
+      <li><a href = "/produse">Produse</a></li>
+      <li><a href = "/index#Formular-Programari">Programari</a></li>
+      <li><a href = "/inregistrare">Inregistrare</a></li>
+    <% if(locals.utilizator){%>
+    <li><div>Logat <%- locals.utilizator.username %></div></li>
+    <li><a href = "/logout">Logout</a></li>
+    
+    <%} %>
+  
+    </ul>
+</nav>
